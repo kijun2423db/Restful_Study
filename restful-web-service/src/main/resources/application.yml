@@ -1,0 +1,26 @@
+# change port
+server :
+  port : 8088
+
+#debugging mode log
+logging:
+  level:
+    org.springframework: DEBUG
+
+spring:
+  messages:
+    basename: messages
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  devtools:
+    restart:
+      enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+# application 을 모니터링하고 관리하는 기능인 actuator 의 기능 확장
+
+# .properties -> property = value
